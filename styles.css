@@ -24,13 +24,13 @@
 }
 
 
-#display {
+#display-box {
     display: flex;
     justify-content: center;
     margin: 50px 0;
 }
 
-#display input {
+#display-box input {
     width: 90%;
     height: 100px;
     background-color: rgb(83, 93, 122);
