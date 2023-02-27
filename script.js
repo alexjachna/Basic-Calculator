@@ -1,7 +1,19 @@
 var displayVal = document.getElementsByName('display')[0];
 
 insertNumber = (num) => {
-    displayVal.value += num;
+
+    if (['/', '*', '+', '-'].includes(displayVal.value.slice(-1))) {
+        displayVal.value += num;
+    }
+    else {
+        if (eval(displayVal.value)) {
+            displayVal.value += num;
+        }
+        else {
+            clearDisplay();
+            displayVal.value = num;
+        }
+    } 
 }
 
 clearDisplay = () => {
